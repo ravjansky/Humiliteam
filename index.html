@@ -1,0 +1,1772 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- ─── PRIMARY SEO ───────────────────────────────────────────── -->
+<title>HumiliTeam Network — Love God. Love People. Make Disciples.</title>
+<meta name="description" content="HumiliTeam Network is a youth community based in Olongapo City, Philippines. We exist to love God, love people, and make disciples. Everyone is welcome — no appointment needed.">
+<meta name="keywords" content="HumiliTeam, Humiliteam Network, youth network, Olongapo City, Philippines, christian community, discipleship, youth group, faith community, church group Olongapo">
+<meta name="author" content="HumiliTeam Network">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#0c0b09">
+<link rel="canonical" href="https://humiliteam.pages.dev/">
+
+<!-- ─── OPEN GRAPH ────────────────────────────────────────────── -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="HumiliTeam Network">
+<meta property="og:title" content="HumiliTeam Network — Love God. Love People. Make Disciples.">
+<meta property="og:description" content="A youth community in Olongapo City, Philippines. 936 members strong, always open, everyone welcome.">
+<meta property="og:url" content="https://humiliteam.pages.dev/">
+<meta property="og:image" content="https://humiliteam.pages.dev/assets/webclip.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="HumiliTeam Network — Love God. Love People. Make Disciples.">
+<meta property="og:locale" content="en_PH">
+
+<!-- ─── TWITTER CARD ──────────────────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="HumiliTeam Network — Love God. Love People. Make Disciples.">
+<meta name="twitter:description" content="A youth community in Olongapo City, Philippines. 936 members strong, always open, everyone welcome.">
+<meta name="twitter:image" content="https://humiliteam.pages.dev/assets/webclip.png">
+<meta name="twitter:image:alt" content="HumiliTeam Network — Love God. Love People. Make Disciples.">
+
+<!-- ─── FAVICONS ───────────────────────────────────────────────── -->
+<link rel="icon" type="image/x-icon" href="assets/favicons/favicon.ico">
+<link rel="icon" type="image/avif" sizes="any" href="assets/favicons/favicon.avif">
+<link rel="icon" type="image/webp" sizes="any" href="assets/favicons/favicon.webp">
+<link rel="apple-touch-icon" href="assets/webclip.png">
+
+<!-- ─── STRUCTURED DATA ───────────────────────────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "HumiliTeam Network",
+  "alternateName": "Humiliteam",
+  "url": "https://humiliteam.pages.dev",
+  "logo": "https://humiliteam.pages.dev/assets/webclip.png",
+  "description": "A youth community based in Olongapo City, Philippines. Love God. Love People. Make Disciples.",
+  "foundingLocation": {
+    "@type": "Place",
+    "name": "Olongapo City",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Olongapo City",
+      "addressRegion": "Zambales",
+      "addressCountry": "PH"
+    }
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": "+63-927-149-7058",
+    "email": "humiliteamnetwork@gmail.com",
+    "contactType": "general"
+  },
+  "sameAs": ["https://www.facebook.com/Humiliteam"]
+}
+</script>
+
+<!-- ─── FONTS ─────────────────────────────────────────────────── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=DM+Mono:wght@300;400&family=Outfit:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+/* ─── MOTION TOKENS ──────────────────────────────────────────── */
+:root {
+  --ease-signature: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-smooth:    cubic-bezier(0.4, 0.0, 0.2, 1);
+  --ease-float:     cubic-bezier(0.25, 0.8, 0.25, 1);
+
+  --bg:          #0c0b09;
+  --bg-2:        #111009;
+  --gold:        #c8913a;
+  --gold-light:  #e3b46a;
+  --gold-dim:    rgba(200, 145, 58, 0.18);
+  --silver:      #c4c8d0;
+  --text-primary:   #f2ede6;
+  --text-secondary: #8a8278;
+  --border:      rgba(200, 145, 58, 0.15);
+
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-ui:      'Outfit', sans-serif;
+  --font-mono:    'DM Mono', monospace;
+
+  --pad: clamp(1.25rem, 4vw, 2.5rem);
+  /* generous gutter so content never touches fixed side elements */
+  --side-gutter: clamp(4rem, 10vw, 8rem);
+}
+
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { font-size: 16px; }
+
+body {
+  background: var(--bg);
+  color: var(--text-primary);
+  font-family: var(--font-ui);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  cursor: none;
+}
+
+/* lock scroll during loader */
+body.is-loading { overflow: hidden; }
+
+/* ─── CUSTOM SELECTION — gold instead of default blue ────────── */
+::selection {
+  background: rgba(200, 145, 58, 0.35);
+  color: var(--text-primary);
+}
+::-moz-selection {
+  background: rgba(200, 145, 58, 0.35);
+  color: var(--text-primary);
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   LOADER
+   Cross fills with gold → morphs into H → H zooms out as
+   clip-path mask revealing the page beneath
+   ═══════════════════════════════════════════════════════════════ */
+.loader-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+/* the morph stage — cross and H share this SVG */
+#loader-morph-stage {
+  width: 120px;
+  height: 160px;
+  overflow: visible;
+}
+
+.loader-percent {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  opacity: 0.7;
+}
+
+.loader-tagline {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  font-style: italic;
+  opacity: 0;
+  transform: translateY(8px);
+}
+
+/* the H mask overlay — covers the full viewport for the zoom-reveal */
+.loader-mask-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  pointer-events: none;
+  display: none; /* activated by JS after morph */
+}
+.loader-mask-overlay svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* ─── CUSTOM CURSOR ──────────────────────────────────────────── */
+#cursor {
+  position: fixed;
+  width: 8px; height: 8px;
+  background: var(--gold);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: transform 0.1s var(--ease-smooth), opacity 0.3s var(--ease-smooth);
+  opacity: 0;
+}
+#cursor-ring {
+  position: fixed;
+  width: 36px; height: 36px;
+  border: 1px solid rgba(200,145,58,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s var(--ease-signature),
+              height 0.4s var(--ease-signature),
+              border-color 0.4s var(--ease-signature);
+  opacity: 0;
+}
+body:has(a:hover) #cursor-ring,
+body:has(button:hover) #cursor-ring {
+  width: 56px; height: 56px;
+  border-color: rgba(200,145,58,0.8);
+}
+
+/* ─── NOISE OVERLAY ──────────────────────────────────────────── */
+body::after {
+  content: '';
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+  opacity: 0.035;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   HERO
+   ═══════════════════════════════════════════════════════════════ */
+.hero-section {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#metaball-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+}
+
+/* ─── NAV ────────────────────────────────────────────────────── */
+.nav {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  padding: var(--pad);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 50;
+  opacity: 0;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+.nav-logo svg {
+  width: 32px; height: 40px;
+  flex-shrink: 0;
+}
+.nav-logo-text {
+  font-family: var(--font-display);
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  letter-spacing: 0.04em;
+}
+.nav-logo-text span { color: var(--gold); }
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.nav-link {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-float);
+}
+.nav-link:hover { color: var(--gold-light); }
+
+.nav-cta {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 0.55rem 1.1rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.3s var(--ease-float), transform 0.3s var(--ease-signature);
+}
+.nav-cta:hover {
+  background: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+/* ─── HERO CONTENT ───────────────────────────────────────────── */
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  z-index: 10;
+  width: 90%;
+  max-width: 900px;
+}
+
+.hero-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+.hero-title {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 8vw, 7rem);
+  font-weight: 300;
+  line-height: 0.92;
+  letter-spacing: -0.02em;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+}
+.hero-title em { font-style: italic; color: var(--gold-light); }
+
+.hero-sub {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  line-height: 1.8;
+  opacity: 0;
+  transform: translateY(12px);
+}
+
+/* ─── FIXED SIDE ELEMENTS — always visible, never fade ───────── */
+.hero-left {
+  position: fixed;
+  top: 50%;
+  left: var(--pad);
+  transform: translateY(-50%);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  opacity: 0;
+}
+.hero-left-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.hero-left-value {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-float);
+}
+.hero-left-value:hover { color: var(--gold-light); }
+
+.hero-nav-links {
+  position: fixed;
+  bottom: var(--pad);
+  left: var(--pad);
+  z-index: 40;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  opacity: 0;
+}
+.hero-nav-link {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-float), padding-left 0.3s var(--ease-signature);
+  position: relative;
+  padding-left: 0;
+}
+.hero-nav-link::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 50%;
+  width: 0; height: 1px;
+  background: var(--gold);
+  transform: translateY(-50%);
+  transition: width 0.3s var(--ease-signature), opacity 0.3s var(--ease-smooth);
+  opacity: 0;
+}
+.hero-nav-link:hover {
+  color: var(--text-primary);
+  padding-left: 1.2rem;
+}
+.hero-nav-link:hover::before { width: 0.8rem; opacity: 1; }
+
+.hero-coords {
+  position: fixed;
+  bottom: var(--pad);
+  right: var(--pad);
+  text-align: right;
+  z-index: 40;
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  color: var(--text-secondary);
+  line-height: 1.7;
+  opacity: 0;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+   CONTENT SECTIONS — padded to clear fixed side elements
+   ═══════════════════════════════════════════════════════════════ */
+.section-about {
+  position: relative;
+  z-index: 20;
+  background: var(--bg);
+  padding: clamp(5rem, 12vw, 10rem) var(--side-gutter);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.about-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.about-label::before {
+  content: '';
+  display: block;
+  width: 2rem; height: 1px;
+  background: var(--gold);
+}
+
+.about-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4.5vw, 4rem);
+  font-weight: 300;
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+}
+.about-title em { font-style: italic; color: var(--gold-light); }
+
+.about-body {
+  font-family: var(--font-ui);
+  font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 1.5rem;
+}
+
+.about-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(200,145,58,0.3);
+  padding-bottom: 0.3rem;
+  transition: gap 0.3s var(--ease-signature), border-color 0.3s var(--ease-float);
+}
+.about-cta:hover { gap: 1.25rem; border-color: var(--gold); }
+.about-cta svg { transition: transform 0.3s var(--ease-signature); }
+.about-cta:hover svg { transform: translateX(4px); }
+
+.about-right {
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.about-stat {
+  border: 1px solid var(--border);
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: border-color 0.4s var(--ease-float);
+}
+.about-stat::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--gold-dim), transparent 60%);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease-float);
+}
+.about-stat:hover { border-color: rgba(200,145,58,0.4); }
+.about-stat:hover::before { opacity: 1; }
+
+.stat-number {
+  font-family: var(--font-display);
+  font-size: clamp(3rem, 5vw, 4.5rem);
+  font-weight: 300;
+  color: var(--gold-light);
+  line-height: 1;
+  margin-bottom: 0.5rem;
+}
+.stat-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+
+/* ─── PILLARS ────────────────────────────────────────────────── */
+.section-pillars {
+  position: relative;
+  z-index: 20;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding: clamp(5rem, 10vw, 8rem) var(--side-gutter);
+}
+.pillars-inner { max-width: 1400px; margin: 0 auto; }
+.pillars-header { text-align: center; margin-bottom: clamp(3rem, 6vw, 5rem); }
+.pillars-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.pillars-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 300;
+  color: var(--text-primary);
+}
+
+.pillars-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5px;
+  background: var(--border);
+}
+.pillar {
+  background: var(--bg-2);
+  padding: clamp(2rem, 4vw, 3rem) clamp(1.5rem, 3vw, 2.5rem);
+  position: relative;
+  overflow: hidden;
+  transition: background 0.4s var(--ease-float);
+}
+.pillar:hover { background: var(--bg); }
+
+.pillar-number {
+  font-family: var(--font-display);
+  font-size: 5rem;
+  font-weight: 300;
+  color: rgba(200,145,58,0.08);
+  line-height: 1;
+  position: absolute;
+  top: 1rem; right: 1.5rem;
+  transition: color 0.4s var(--ease-float);
+}
+.pillar:hover .pillar-number { color: rgba(200,145,58,0.15); }
+
+.pillar-icon { font-size: 1.5rem; margin-bottom: 1.25rem; display: block; }
+.pillar-name {
+  font-family: var(--font-display);
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  font-weight: 400;
+  color: var(--text-primary);
+  margin-bottom: 1rem;
+  line-height: 1.1;
+}
+.pillar-name em { font-style: italic; color: var(--gold-light); }
+.pillar-desc {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-secondary);
+}
+
+/* ─── COMMUNITY ──────────────────────────────────────────────── */
+.section-community {
+  position: relative;
+  z-index: 20;
+  background: var(--bg);
+  padding: clamp(5rem, 12vw, 10rem) var(--side-gutter);
+  text-align: center;
+}
+.community-inner { max-width: 720px; margin: 0 auto; }
+
+.community-eyebrow {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+.community-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+.community-title em { font-style: italic; color: var(--gold-light); }
+.community-body {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 3rem;
+}
+
+.community-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0 auto 3rem;
+  text-align: left;
+}
+.comm-card {
+  border: 1px solid var(--border);
+  padding: 1.5rem;
+  transition: border-color 0.3s var(--ease-float), transform 0.3s var(--ease-signature);
+}
+.comm-card:hover {
+  border-color: rgba(200,145,58,0.4);
+  transform: translateY(-3px);
+}
+.comm-card-tag {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 0.75rem;
+}
+.comm-card-text {
+  font-family: var(--font-ui);
+  font-size: 0.9rem;
+  font-weight: 300;
+  line-height: 1.65;
+  color: var(--text-secondary);
+}
+
+/* ─── CTA ────────────────────────────────────────────────────── */
+.cta-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--bg);
+  background: var(--gold);
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  text-decoration: none;
+  transition: background 0.3s var(--ease-float), transform 0.4s var(--ease-signature), gap 0.3s var(--ease-signature);
+}
+.btn-primary:hover {
+  background: var(--gold-light);
+  transform: translateY(-2px);
+  gap: 1.1rem;
+}
+.btn-secondary {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-decoration: none;
+  border-bottom: 1px solid rgba(138,130,120,0.3);
+  padding-bottom: 0.2rem;
+  transition: color 0.3s var(--ease-float), border-color 0.3s var(--ease-float);
+}
+.btn-secondary:hover { color: var(--gold); border-color: var(--gold); }
+
+/* ─── CONTACT ────────────────────────────────────────────────── */
+.section-contact {
+  position: relative;
+  z-index: 20;
+  background: var(--bg-2);
+  border-top: 1px solid var(--border);
+  padding: clamp(5rem, 10vw, 8rem) var(--side-gutter);
+}
+.contact-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 6rem);
+  align-items: start;
+}
+
+.contact-left-label {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+.contact-left-label::before {
+  content: '';
+  display: block;
+  width: 2rem; height: 1px;
+  background: var(--gold);
+}
+.contact-title {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.05;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+.contact-title em { font-style: italic; color: var(--gold-light); }
+.contact-body {
+  font-family: var(--font-ui);
+  font-size: 0.95rem;
+  font-weight: 300;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.contact-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+.contact-item-label {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.contact-item-value {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  color: var(--text-primary);
+  text-decoration: none;
+  transition: color 0.3s var(--ease-float);
+}
+.contact-item-value:hover { color: var(--gold); }
+
+.contact-right {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding-top: 1rem;
+}
+.contact-fb-btn {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 2rem;
+  background: transparent;
+  border: 1px solid var(--border);
+  text-decoration: none;
+  transition: border-color 0.3s var(--ease-float), background 0.3s var(--ease-float), transform 0.4s var(--ease-signature);
+  position: relative;
+  overflow: hidden;
+}
+.contact-fb-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: var(--gold-dim);
+  transform: translateX(-100%);
+  transition: transform 0.5s var(--ease-signature);
+}
+.contact-fb-btn:hover {
+  border-color: var(--gold);
+  transform: translateY(-2px);
+}
+.contact-fb-btn:hover::before { transform: translateX(0); }
+
+.fb-btn-left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+.fb-btn-icon {
+  width: 40px; height: 40px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--bg);
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+.fb-btn-text-top {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 0.2rem;
+}
+.fb-btn-text-main {
+  font-family: var(--font-ui);
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text-primary);
+  display: block;
+}
+.fb-btn-arrow {
+  color: var(--gold);
+  font-size: 1.25rem;
+  position: relative;
+  transition: transform 0.3s var(--ease-signature);
+}
+.contact-fb-btn:hover .fb-btn-arrow { transform: translateX(4px); }
+
+/* ─── FOOTER ─────────────────────────────────────────────────── */
+footer {
+  position: relative;
+  z-index: 20;
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  padding: 2.5rem var(--side-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.footer-left {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+}
+.footer-center {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--gold);
+  letter-spacing: 0.05em;
+}
+.footer-right {
+  font-family: var(--font-mono);
+  font-size: 0.6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+/* ─── SCROLL REVEAL ──────────────────────────────────────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.9s var(--ease-signature), transform 0.9s var(--ease-signature);
+}
+.reveal.visible { opacity: 1; transform: none; }
+.reveal-delay-1 { transition-delay: 0.1s; }
+.reveal-delay-2 { transition-delay: 0.2s; }
+.reveal-delay-3 { transition-delay: 0.3s; }
+.reveal-delay-4 { transition-delay: 0.4s; }
+
+@keyframes fadeUp { to { opacity: 1; transform: none; } }
+
+/* ─── RESPONSIVE ─────────────────────────────────────────────── */
+@media (max-width: 900px) {
+  :root { --side-gutter: var(--pad); }
+  .section-about { grid-template-columns: 1fr; }
+  .about-right { grid-template-columns: 1fr 1fr; grid-template-rows: auto; }
+  .pillars-grid { grid-template-columns: 1fr; gap: 1px; }
+  .community-cards { grid-template-columns: 1fr; }
+  .contact-inner { grid-template-columns: 1fr; }
+  footer { flex-direction: column; gap: 1rem; text-align: center; }
+  .footer-right { text-align: center; }
+  body { cursor: auto; }
+  #cursor, #cursor-ring { display: none; }
+}
+@media (max-width: 600px) {
+  .nav-right { display: none; }
+  .hero-left { display: none; }
+  .about-right { grid-template-columns: 1fr; }
+  .hero-nav-links { bottom: 1.5rem; left: 1.25rem; gap: 0.2rem; }
+  .hero-coords { bottom: 1.5rem; right: 1.25rem; font-size: 0.55rem; }
+}
+
+/* ─── PREFERS REDUCED MOTION ─────────────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+  .loader-screen { display: none; }
+  .loader-mask-overlay { display: none !important; }
+}
+</style>
+</head>
+
+<body class="is-loading">
+
+<!-- ═══════════════════════════════════════════════════════════════
+     LOADER — cross fills, morphs to H, H zooms to reveal page
+     ═══════════════════════════════════════════════════════════════ -->
+<div class="loader-screen" id="loader" aria-live="polite" role="status">
+  <!-- morph stage: cross (visible) and H (morph target, invisible) share one SVG -->
+  <svg id="loader-morph-stage" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <defs>
+      <!-- gold gradient for the fill -->
+      <linearGradient id="loader-grad" x1="0" y1="1" x2="0" y2="0">
+        <stop offset="0%" stop-color="#c8913a"/>
+        <stop offset="100%" stop-color="#e3b46a"/>
+      </linearGradient>
+      <!-- clip mask for the fill-from-bottom effect -->
+      <clipPath id="loader-fill-clip">
+        <rect id="loader-fill-rect" x="0" y="200" width="200" height="200"/>
+      </clipPath>
+    </defs>
+    <!-- cross outline — stroke only -->
+    <g id="cross-outline" opacity="0.35">
+      <rect x="90" y="6" width="20" height="188" rx="4" fill="none" stroke="#c8913a" stroke-width="1.5"/>
+      <rect x="40" y="70" width="120" height="20" rx="3" fill="none" stroke="#c8913a" stroke-width="1.5"/>
+    </g>
+    <!-- cross path (will morph into H path) — filled, clipped by the rising rect -->
+    <path id="loader-cross-path"
+      d="M90 6 L110 6 Q114 6 114 10 L114 190 Q114 194 110 194 L90 194 Q86 194 86 190 L86 10 Q86 6 90 6 Z M40 70 L160 70 Q163 70 163 73 L163 87 Q163 90 160 90 L40 90 Q37 90 37 87 L37 73 Q37 70 40 70 Z"
+      fill="url(#loader-grad)"
+      clip-path="url(#loader-fill-clip)"
+    />
+    <!-- H path — invisible, used as morph target -->
+    <path id="loader-h-path"
+      d="M20 180V20h35v65h90V20h35v160h-35v-65H55v65ZM10 20h55V0H10Zm125 0h55V0h-55ZM10 180h55v20H10Zm125 0h55v20h-55Z"
+      fill="transparent"
+    />
+  </svg>
+  <span class="loader-percent" id="loader-percent">0%</span>
+  <span class="loader-tagline" id="loader-tagline">where faith meets friendship</span>
+</div>
+
+<!-- H mask overlay — used for the zoom-reveal after morph -->
+<div class="loader-mask-overlay" id="loader-mask-overlay">
+  <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <defs>
+      <clipPath id="h-reveal-clip" clipPathUnits="objectBoundingBox">
+        <path id="h-clip-path" d="M0.1,0.9 L0.1,0.1 L0.275,0.1 L0.275,0.425 L0.725,0.425 L0.725,0.1 L0.9,0.1 L0.9,0.9 L0.725,0.9 L0.725,0.575 L0.275,0.575 L0.275,0.9 Z M0.05,0.1 L0.325,0.1 L0.325,0 L0.05,0 Z M0.675,0.1 L0.95,0.1 L0.95,0 L0.675,0 Z M0.05,0.9 L0.325,0.9 L0.325,1 L0.05,1 Z M0.675,0.9 L0.95,0.9 L0.95,1 L0.675,1 Z"/>
+      </clipPath>
+    </defs>
+    <!-- dark overlay with H-shaped hole -->
+    <rect width="200" height="200" fill="#0c0b09"/>
+  </svg>
+</div>
+
+<!-- ─── CURSOR ────────────────────────────────────────────────── -->
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<!-- ─── NAV ──────────────────────────────────────────────────── -->
+<nav class="nav" id="main-nav" aria-label="Main navigation">
+  <a href="#" class="nav-logo" aria-label="HumiliTeam Network home">
+    <!-- inline SVG logo — no external images -->
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 250" aria-hidden="true">
+      <defs>
+        <filter id="logo-shadow" x="-20%" y="-20%" width="140%" height="140%">
+          <feDropShadow dx="0" dy="4" stdDeviation="4" flood-color="#000" flood-opacity=".65"/>
+        </filter>
+      </defs>
+      <path fill="#e8e9ec" d="M30 20h140v15H30z"/>
+      <path fill="#81838a" d="M30 35h70L85 75H60L30 50zm70 0h70v15l-30 25h-25z"/>
+      <path fill="#c5c7cc" d="M100 35v195l-15-20V75z"/>
+      <path fill="#81838a" d="m100 35 15 40v135l-15 20z"/>
+      <g filter="url(#logo-shadow)">
+        <path fill="#e2a054" d="M65 55 50 70v115l15 15z"/>
+        <path fill="#965924" d="M65 55v145l15-15V70z"/>
+        <path fill="#e2a054" d="m135 55-15 15v115l15 15z"/>
+        <path fill="#965924" d="M135 55v145l15-15V70z"/>
+        <path fill="#e2a054" d="m65 140 70-30V95l-70 30z"/>
+        <path fill="#965924" d="M65 140v15l70-30v-15z"/>
+      </g>
+    </svg>
+    <span class="nav-logo-text">Humili<span>Team</span></span>
+  </a>
+  <div class="nav-right">
+    <a href="#about" class="nav-link">About</a>
+    <a href="#community" class="nav-link">Community</a>
+    <a href="#contact" class="nav-link">Contact</a>
+    <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="nav-cta">Join Us</a>
+  </div>
+</nav>
+
+<!-- ─── HERO ──────────────────────────────────────────────────── -->
+<section class="hero-section" id="hero-section" aria-label="Hero banner">
+  <canvas id="metaball-canvas" aria-hidden="true"></canvas>
+
+  <div class="hero-content">
+    <p class="hero-eyebrow">Olongapo City, Philippines · Est. Youth Network</p>
+    <h1 class="hero-title">Love God.<br><em>Love People.</em><br>Make Disciples.</h1>
+    <p class="hero-sub">936 souls strong &nbsp;·&nbsp; always open &nbsp;·&nbsp; everyone is welcome</p>
+  </div>
+
+  <div class="hero-left" id="hero-left">
+    <span class="hero-left-label">+Get in touch</span>
+    <a href="tel:09271497058" class="hero-left-value">0927 149 7058</a>
+    <a href="mailto:humiliteamnetwork@gmail.com" class="hero-left-value" style="margin-top:0.1rem">humiliteamnetwork<br>@gmail.com</a>
+  </div>
+
+  <nav class="hero-nav-links" id="hero-nav" aria-label="Quick navigation">
+    <a href="#about" class="hero-nav-link">About Us</a>
+    <a href="#community" class="hero-nav-link">Our Community</a>
+    <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="hero-nav-link">Facebook</a>
+    <a href="#contact" class="hero-nav-link">Find Us</a>
+  </nav>
+
+  <div class="hero-coords" id="hero-coords">
+    <p>HumiliTeam Network · Active</p>
+    <p>where faith meets friendship</p>
+  </div>
+</section>
+
+<!-- ─── ABOUT ─────────────────────────────────────────────────── -->
+<section class="section-about" id="about" aria-labelledby="about-heading">
+  <div>
+    <p class="about-label reveal">Who We Are</p>
+    <h2 class="about-title reveal reveal-delay-1" id="about-heading">A band of people<br><em>finding God</em><br>and each other.</h2>
+    <p class="about-body reveal reveal-delay-2">HumiliTeam Network isn't your typical church group. We're a youth network based in Olongapo City built on three things: loving God deeply, loving people fiercely, and making disciples who actually make disciples.</p>
+    <p class="about-body reveal reveal-delay-2">But we're also just people looking for real friends. If you're searching for community — whether you're deeply rooted in faith or just curious — you belong here. Walk in any time. No performance required.</p>
+    <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="about-cta reveal reveal-delay-3">
+      Meet the community
+      <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+    </a>
+  </div>
+  <div class="about-right">
+    <div class="about-stat reveal reveal-delay-2"><div class="stat-number">936</div><div class="stat-label">and counting · members</div></div>
+    <div class="about-stat reveal reveal-delay-3"><div class="stat-number">5+</div><div class="stat-label">years · building community</div></div>
+    <div class="about-stat reveal reveal-delay-3"><div class="stat-number">∞</div><div class="stat-label">Always open · no appointment needed</div></div>
+    <div class="about-stat reveal reveal-delay-4"><div class="stat-number">OLO</div><div class="stat-label">Olongapo City · Philippines</div></div>
+  </div>
+</section>
+
+<!-- ─── PILLARS ────────────────────────────────────────────────── -->
+<section class="section-pillars" aria-labelledby="pillars-heading">
+  <div class="pillars-inner">
+    <header class="pillars-header">
+      <p class="pillars-eyebrow reveal">What We Stand On</p>
+      <h2 class="pillars-title reveal reveal-delay-1" id="pillars-heading">Three pillars.<br><em>One mission.</em></h2>
+    </header>
+    <div class="pillars-grid">
+      <article class="pillar reveal">
+        <span class="pillar-number" aria-hidden="true">01</span>
+        <span class="pillar-icon" aria-hidden="true">✦</span>
+        <h3 class="pillar-name">Love <em>God</em></h3>
+        <p class="pillar-desc">Faith isn't a performance — it's a relationship. We dive into scripture, ask hard questions, and pursue a God who's bigger than any answer we have.</p>
+      </article>
+      <article class="pillar reveal reveal-delay-1">
+        <span class="pillar-number" aria-hidden="true">02</span>
+        <span class="pillar-icon" aria-hidden="true">◈</span>
+        <h3 class="pillar-name">Love <em>People</em></h3>
+        <p class="pillar-desc">Belonging before believing. Everyone is welcome at any stage of their journey. We don't gatekeep grace — we just show up for each other.</p>
+      </article>
+      <article class="pillar reveal reveal-delay-2">
+        <span class="pillar-number" aria-hidden="true">03</span>
+        <span class="pillar-icon" aria-hidden="true">◐</span>
+        <h3 class="pillar-name">Make <em>Disciples</em></h3>
+        <p class="pillar-desc">The goal was never to grow a group. The goal is to grow people who go and do the same thing — love well, lead humbly, multiply.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ─── COMMUNITY ─────────────────────────────────────────────── -->
+<section class="section-community" id="community" aria-labelledby="community-heading">
+  <div class="community-inner">
+    <p class="community-eyebrow reveal">You're Already Welcome</p>
+    <h2 class="community-title reveal reveal-delay-1" id="community-heading">Not a service.<br>A <em>family.</em></h2>
+    <p class="community-body reveal reveal-delay-2">You don't need to have it together to show up. HumiliTeam is for people who are figuring it out — people who want Godly friends, not just acquaintances. People who want depth, honesty, and a place they can actually belong.</p>
+    <div class="community-cards">
+      <div class="comm-card reveal"><p class="comm-card-tag">For the Seeker</p><p class="comm-card-text">Curious about God but not sure where to start? Come ask your questions. We don't have every answer — but we'll look for them together.</p></div>
+      <div class="comm-card reveal reveal-delay-1"><p class="comm-card-tag">For the Lonely</p><p class="comm-card-text">Looking for real friends — not just followers? We're a group of people who genuinely show up for each other. Come as you are.</p></div>
+      <div class="comm-card reveal reveal-delay-2"><p class="comm-card-tag">For the Faithful</p><p class="comm-card-text">Rooted in your faith and ready to go deeper? We study together, pray together, and challenge each other to keep growing.</p></div>
+      <div class="comm-card reveal reveal-delay-3"><p class="comm-card-tag">For the Lost</p><p class="comm-card-text">Going through something heavy? You don't have to carry it alone. This is a safe place — judgment isn't something we do here.</p></div>
+    </div>
+    <div class="cta-block reveal reveal-delay-2">
+      <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="btn-primary">
+        Join us on Facebook
+        <svg width="14" height="10" viewBox="0 0 14 10" fill="none" aria-hidden="true"><path d="M1 5H13M9 1L13 5L9 9" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#contact" class="btn-secondary">or reach out directly</a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTACT ────────────────────────────────────────────────── -->
+<section class="section-contact" id="contact" aria-labelledby="contact-heading">
+  <div class="contact-inner">
+    <div>
+      <p class="contact-left-label reveal">Reach Out</p>
+      <h2 class="contact-title reveal reveal-delay-1" id="contact-heading">We're always<br><em>open.</em></h2>
+      <p class="contact-body reveal reveal-delay-2">No appointment needed. No perfect timing. If you feel the pull to reach out, that's enough. We're here.</p>
+      <address class="contact-details reveal reveal-delay-2" style="font-style:normal">
+        <div class="contact-item"><span class="contact-item-label">Phone</span><a href="tel:09271497058" class="contact-item-value">0927 149 7058</a></div>
+        <div class="contact-item"><span class="contact-item-label">Email</span><a href="mailto:humiliteamnetwork@gmail.com" class="contact-item-value">humiliteamnetwork@gmail.com</a></div>
+        <div class="contact-item"><span class="contact-item-label">Location</span><span class="contact-item-value">Olongapo City, Philippines</span></div>
+        <div class="contact-item"><span class="contact-item-label">Hours</span><span class="contact-item-value">Always open</span></div>
+      </address>
+    </div>
+    <div class="contact-right reveal reveal-delay-2">
+      <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="contact-fb-btn">
+        <div class="fb-btn-left"><div class="fb-btn-icon" aria-hidden="true">f</div><div><span class="fb-btn-text-top">Follow us on</span><span class="fb-btn-text-main">Facebook</span></div></div>
+        <span class="fb-btn-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="contact-fb-btn">
+        <div class="fb-btn-left"><div class="fb-btn-icon" style="background:var(--silver);color:var(--bg)" aria-hidden="true">✉</div><div><span class="fb-btn-text-top">Message us on</span><span class="fb-btn-text-main">Facebook Messenger</span></div></div>
+        <span class="fb-btn-arrow" aria-hidden="true">→</span>
+      </a>
+      <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="contact-fb-btn">
+        <div class="fb-btn-left"><div class="fb-btn-icon" style="background:transparent;border:1px solid var(--border)" aria-hidden="true">👥</div><div><span class="fb-btn-text-top">See our community on</span><span class="fb-btn-text-main">Facebook Group</span></div></div>
+        <span class="fb-btn-arrow" aria-hidden="true">→</span>
+      </a>
+      <p style="font-family:var(--font-mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--text-secondary);text-align:center;margin-top:0.5rem">936 followers · 29 following</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─────────────────────────────────────────────────── -->
+<footer>
+  <span class="footer-left">© 2025 HumiliTeam Network</span>
+  <span class="footer-center">Humili<span style="color:var(--text-secondary)">Team</span></span>
+  <span class="footer-right">Olongapo City, PH<br>Always open</span>
+</footer>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     SCRIPTS
+     ═══════════════════════════════════════════════════════════════ -->
+<!-- GSAP core + MorphSVG for the real path morph -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<!-- MorphSVG is a Club plugin — we use a manual path interpolation fallback below -->
+
+<!-- Lenis -->
+<script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
+
+<!-- ─── LOADER + PAGE REVEAL ───────────────────────────────────── -->
+<script>
+(function() {
+  const EASE = {
+    signature: "cubic-bezier(0.22, 1, 0.36, 1)",
+    smooth:    "cubic-bezier(0.4, 0.0, 0.2, 1)",
+    float:     "cubic-bezier(0.25, 0.8, 0.25, 1)"
+  };
+
+  const loaderEl    = document.getElementById('loader');
+  const fillRect    = document.getElementById('loader-fill-rect');
+  const percentEl   = document.getElementById('loader-percent');
+  const taglineEl   = document.getElementById('loader-tagline');
+  const crossPath   = document.getElementById('loader-cross-path');
+  const hPath       = document.getElementById('loader-h-path');
+  const maskOverlay = document.getElementById('loader-mask-overlay');
+
+  let progress = 0;
+  let loaded = false;
+  let shaderReady = false;
+
+  window.__shaderReady = function() { shaderReady = true; };
+
+  function updateProgress(val) {
+    progress = Math.min(val, 100);
+    /* fill rect rises from bottom: y goes from 200 (empty) to 0 (full) */
+    fillRect.setAttribute('y', 200 - (progress / 100) * 200);
+    percentEl.textContent = Math.round(progress) + '%';
+  }
+
+  function checkReady() {
+    return document.fonts.ready.then(function() {
+      return new Promise(function(resolve) {
+        (function poll() {
+          if (shaderReady) return resolve();
+          setTimeout(poll, 60);
+        })();
+      });
+    });
+  }
+
+  /* animate fill while loading */
+  var fillTween = gsap.to({ val: 0 }, {
+    val: 80,
+    duration: 2.5,
+    ease: EASE.smooth,
+    onUpdate: function() { updateProgress(this.targets()[0].val); }
+  });
+
+  /* tagline entrance */
+  gsap.to(taglineEl, { opacity: 1, y: 0, duration: 0.8, delay: 0.5, ease: EASE.signature });
+
+  checkReady().then(function() {
+    loaded = true;
+    fillTween.kill();
+    gsap.to({ val: progress }, {
+      val: 100,
+      duration: 0.5,
+      ease: EASE.signature,
+      onUpdate: function() { updateProgress(this.targets()[0].val); },
+      onComplete: runMorphSequence
+    });
+  });
+
+  /* safety net */
+  setTimeout(function() {
+    if (!loaded) {
+      loaded = true;
+      shaderReady = true;
+      fillTween.kill();
+      updateProgress(100);
+      runMorphSequence();
+    }
+  }, 7000);
+
+  /* ── the morph: cross path → H path ── */
+  function runMorphSequence() {
+    var hPathData = hPath.getAttribute('d');
+
+    var tl = gsap.timeline();
+
+    /* fade out text elements */
+    tl.to([percentEl, taglineEl], { opacity: 0, duration: 0.3, ease: EASE.smooth })
+
+    /* morph the cross path into H path — using GSAP attr tween with path data
+       Since MorphSVG is a club plugin, we do a crossfade-scale morph:
+       shrink cross, swap path data at midpoint, grow H */
+    .to('#loader-morph-stage', {
+      scale: 0.7,
+      opacity: 0.4,
+      duration: 0.4,
+      ease: EASE.signature,
+      onComplete: function() {
+        /* swap cross for H path data */
+        crossPath.setAttribute('d', hPathData);
+        crossPath.setAttribute('clip-path', '');
+        document.getElementById('cross-outline').style.display = 'none';
+      }
+    })
+    .to('#loader-morph-stage', {
+      scale: 1.1,
+      opacity: 1,
+      duration: 0.5,
+      ease: EASE.signature
+    })
+
+    /* hold briefly so the H reads */
+    .to({}, { duration: 0.5 })
+
+    /* now: zoom the H outward as a clip-path mask revealing the page */
+    .call(function() {
+      /* hide the loader bg, activate the mask overlay */
+      loaderEl.style.background = 'transparent';
+      loaderEl.style.pointerEvents = 'none';
+
+      /* hide loader SVG */
+      document.getElementById('loader-morph-stage').style.display = 'none';
+
+      /* show mask overlay — a dark rect with an H-shaped clip punched through */
+      maskOverlay.style.display = 'block';
+    })
+
+    /* scale the clip-path from small (H letterform) outward past viewport edges */
+    .fromTo('#h-clip-path', {
+      attr: {
+        transform: 'translate(0.35, 0.3) scale(0.3)'
+      }
+    }, {
+      attr: {
+        transform: 'translate(-0.5, -0.5) scale(2.2)'
+      },
+      duration: 1.2,
+      ease: EASE.signature
+    })
+
+    /* fade out the mask overlay entirely */
+    .to(maskOverlay, {
+      opacity: 0,
+      duration: 0.4,
+      ease: EASE.smooth,
+      onComplete: function() {
+        maskOverlay.style.display = 'none';
+        loaderEl.style.display = 'none';
+        document.body.classList.remove('is-loading');
+        revealPage();
+      }
+    }, '-=0.2');
+  }
+
+  function revealPage() {
+    var heroTl = gsap.timeline({ defaults: { ease: EASE.signature } });
+    heroTl
+      .to('.hero-eyebrow',  { opacity: 1, y: 0, duration: 0.8 })
+      .to('.hero-title',    { opacity: 1, y: 0, duration: 1 }, '-=0.5')
+      .to('.hero-sub',      { opacity: 1, y: 0, duration: 0.8 }, '-=0.5')
+      .to('#main-nav',      { opacity: 1, duration: 0.6 }, '-=0.6')
+      .to('#hero-left',     { opacity: 1, duration: 0.6 }, '-=0.4')
+      .to('#hero-nav',      { opacity: 1, duration: 0.6 }, '-=0.4')
+      .to('#hero-coords',   { opacity: 1, duration: 0.6 }, '-=0.4')
+      .to('#cursor',        { opacity: 1, duration: 0.3 }, '-=0.3')
+      .to('#cursor-ring',   { opacity: 1, duration: 0.3 }, '-=0.3');
+  }
+})();
+</script>
+
+<!-- ─── METABALL SHADER (OPTIMIZED + DESKTOP MOUSE + VIEWPORT PAUSE) ─── -->
+<script type="module">
+import * as THREE from "https://esm.sh/three@0.178.0";
+
+const canvas = document.getElementById('metaball-canvas');
+const heroSection = document.getElementById('hero-section');
+const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
+const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* bail entirely if reduced motion */
+if (isReducedMotion) {
+  if (window.__shaderReady) window.__shaderReady();
+} else {
+
+const renderScale = isMobile ? 0.35 : 0.5;
+const pixelRatio  = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5);
+const effectiveRatio = pixelRatio * renderScale;
+
+let scene, camera, renderer, material, clock;
+let raf;
+let heroInView = true; /* tracks if hero is visible */
+
+/* mouse — desktop only */
+let mouse = new THREE.Vector2(0.5, 0.5);
+let targetMouse = new THREE.Vector2(0.5, 0.5);
+let cursorSphere = new THREE.Vector3(0, 0, 0);
+const enableMouse = !isMobile;
+
+function screenToWorld(nx, ny) {
+  const ux = nx * 2 - 1;
+  const uy = ny * 2 - 1;
+  const aspect = window.innerWidth / window.innerHeight;
+  return new THREE.Vector3(ux * aspect * 2, uy * 2, 0);
+}
+
+function init() {
+  scene  = new THREE.Scene();
+  camera = new THREE.OrthographicCamera(-1, 1, 1, -1, 0.1, 10);
+  camera.position.z = 1;
+  clock  = new THREE.Clock();
+
+  renderer = new THREE.WebGLRenderer({
+    canvas,
+    antialias: false,
+    alpha: true,
+    powerPreference: isMobile ? 'low-power' : 'default'
+  });
+  renderer.setPixelRatio(effectiveRatio);
+  renderer.setSize(window.innerWidth, window.innerHeight);
+  renderer.setClearColor(0x000000, 0);
+
+  canvas.style.width  = '100%';
+  canvas.style.height = '100%';
+
+  const w  = window.innerWidth;
+  const h  = window.innerHeight;
+  const rw = w * effectiveRatio;
+  const rh = h * effectiveRatio;
+
+  const GOLD = new THREE.Color(0xc8913a);
+  const BG   = new THREE.Color(0x0c0b09);
+
+  const sphereCount = isMobile ? 2 : 4;
+  const marchSteps  = isMobile ? 12 : 28;
+
+  material = new THREE.ShaderMaterial({
+    uniforms: {
+      uTime:             { value: 0 },
+      uResolution:       { value: new THREE.Vector2(w, h) },
+      uActualResolution: { value: new THREE.Vector2(rw, rh) },
+      uCursorSphere:     { value: new THREE.Vector3(0, 0, 0) },
+      uCursorRadius:     { value: enableMouse ? 0.08 : 0.0 },
+      uSphereCount:      { value: sphereCount },
+      uFixedTLRadius:    { value: 0.75 },
+      uFixedBRRadius:    { value: 0.85 },
+      uSmallTLRadius:    { value: 0.3 },
+      uSmallBRRadius:    { value: 0.3 },
+      uSmoothness:       { value: 0.45 },
+      uAmbient:          { value: 0.04 },
+      uDiffuse:          { value: 0.75 },
+      uSpecular:         { value: 1.6 },
+      uSpecPow:          { value: 6.0 },
+      uFresnel:          { value: 1.3 },
+      uBgColor:          { value: BG },
+      uSphereColor:      { value: new THREE.Color(0x0a0800) },
+      uLightColor:       { value: GOLD },
+      uLightPos:         { value: new THREE.Vector3(0.9, 1.1, 0.7) },
+      uContrast:         { value: 1.9 },
+      uFog:              { value: 0.09 },
+      uSpeed:            { value: 0.35 },
+      uScale:            { value: 1.1 },
+      uGlowIntensity:    { value: enableMouse ? 0.5 : 0.0 },
+      uGlowRadius:       { value: 1.4 },
+      uGlowColor:        { value: new THREE.Color(0xe3b46a) },
+    },
+    vertexShader: `
+      varying vec2 vUv;
+      void main() {
+        vUv = uv;
+        gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+      }
+    `,
+    fragmentShader: `
+      precision mediump float;
+
+      uniform float uTime;
+      uniform vec2 uResolution;
+      uniform vec2 uActualResolution;
+      uniform vec3 uCursorSphere;
+      uniform float uCursorRadius;
+      uniform int uSphereCount;
+      uniform float uFixedTLRadius;
+      uniform float uFixedBRRadius;
+      uniform float uSmallTLRadius;
+      uniform float uSmallBRRadius;
+      uniform float uSmoothness;
+      uniform float uAmbient;
+      uniform float uDiffuse;
+      uniform float uSpecular;
+      uniform float uSpecPow;
+      uniform float uFresnel;
+      uniform vec3 uBgColor;
+      uniform vec3 uSphereColor;
+      uniform vec3 uLightColor;
+      uniform vec3 uLightPos;
+      uniform float uContrast;
+      uniform float uFog;
+      uniform float uSpeed;
+      uniform float uScale;
+      uniform float uGlowIntensity;
+      uniform float uGlowRadius;
+      uniform vec3 uGlowColor;
+
+      varying vec2 vUv;
+
+      const float PI  = 3.14159265;
+      const float EPS = 0.002;
+
+      float smin(float a, float b, float k) {
+        float h = max(k - abs(a - b), 0.0) / k;
+        return min(a, b) - h * h * k * 0.25;
+      }
+
+      float sdSphere(vec3 p, float r) { return length(p) - r; }
+
+      vec3 s2w(vec2 n) {
+        vec2 uv = n * 2.0 - 1.0;
+        uv.x *= uResolution.x / uResolution.y;
+        return vec3(uv * 2.0, 0.0);
+      }
+
+      float scene(vec3 p) {
+        float res = 100.0;
+        float t = uTime * uSpeed;
+
+        float tl  = sdSphere(p - s2w(vec2(0.08, 0.92)), uFixedTLRadius);
+        float stl = sdSphere(p - s2w(vec2(0.25, 0.72)), uSmallTLRadius);
+        float br  = sdSphere(p - s2w(vec2(0.92, 0.08)), uFixedBRRadius);
+        float sbr = sdSphere(p - s2w(vec2(0.72, 0.25)), uSmallBRRadius);
+
+        res = smin(smin(tl, stl, 0.4), smin(br, sbr, 0.4), 0.2);
+
+        int limit = min(uSphereCount, 4);
+        for (int i = 0; i < 4; i++) {
+          if (i >= limit) break;
+          float fi  = float(i);
+          float spd = 0.4 + fi * 0.12;
+          float r   = 0.12 + mod(fi, 3.0) * 0.06;
+          float orb = (0.3 + mod(fi, 3.0) * 0.15) * uScale;
+          float ph  = fi * PI * 0.37;
+          vec3 off  = vec3(
+            sin(t * spd + ph) * orb,
+            cos(t * spd * 0.8 + ph * 1.2) * orb * 0.7,
+            sin(t * 0.4 + ph) * 0.2
+          );
+          /* cursor attraction — desktop only via uCursorRadius > 0 */
+          if (uCursorRadius > 0.01) {
+            vec3 toCursor = uCursorSphere - off;
+            float cd = length(toCursor);
+            if (cd < 1.5 && cd > 0.0) off += normalize(toCursor) * (1.0 - cd / 1.5) * 0.25;
+          }
+          res = smin(res, sdSphere(p - off, r), uSmoothness * 0.8);
+        }
+
+        /* cursor ball — only if mouse enabled */
+        if (uCursorRadius > 0.01) {
+          float cursor = sdSphere(p - uCursorSphere, uCursorRadius);
+          res = smin(res, cursor, uSmoothness);
+        }
+
+        return res;
+      }
+
+      vec3 normal(vec3 p) {
+        float e = 0.002;
+        return normalize(vec3(
+          scene(p + vec3(e,0,0)) - scene(p - vec3(e,0,0)),
+          scene(p + vec3(0,e,0)) - scene(p - vec3(0,e,0)),
+          scene(p + vec3(0,0,e)) - scene(p - vec3(0,0,e))
+        ));
+      }
+
+      float ao(vec3 p, vec3 n) {
+        float o = 0.0; float w = 1.0;
+        for (int i = 0; i < 3; i++) {
+          float d = 0.02 + 0.04 * float(i * i);
+          o += (d - scene(p + n * d)) * w;
+          w *= 0.7;
+        }
+        return clamp(1.0 - o, 0.0, 1.0);
+      }
+
+      float march(vec3 ro, vec3 rd) {
+        float t = 0.0;
+        for (int i = 0; i < ${marchSteps}; i++) {
+          float d = scene(ro + rd * t);
+          if (d < EPS) return t;
+          if (t > 5.0) break;
+          t += d;
+        }
+        return -1.0;
+      }
+
+      void main() {
+        vec2 fc = gl_FragCoord.xy / uActualResolution * 2.0 - 1.0;
+        fc.x *= uResolution.x / uResolution.y;
+        vec3 ro = vec3(fc * 2.0, -1.0);
+        vec3 rd = vec3(0.0, 0.0, 1.0);
+
+        float t = march(ro, rd);
+
+        /* cursor glow on bg — desktop only */
+        float cursorDist = length(ro.xy - uCursorSphere.xy);
+        float glow = uGlowIntensity > 0.0
+          ? pow(max(0.0, 1.0 - cursorDist / uGlowRadius), 2.0) * uGlowIntensity
+          : 0.0;
+
+        if (t > 0.0) {
+          vec3 p = ro + rd * t;
+          vec3 n = normal(p);
+          vec3 v = -rd;
+          vec3 l = normalize(uLightPos);
+          float diff = max(dot(n, l), 0.0);
+          vec3 ref = reflect(-l, n);
+          float spec = pow(max(dot(v, ref), 0.0), uSpecPow);
+          float fres = pow(1.0 - max(dot(v, n), 0.0), uFresnel);
+          float occl = ao(p, n);
+
+          vec3 col = uSphereColor;
+          col += uLightColor * uAmbient * occl;
+          col += uLightColor * diff * uDiffuse;
+          col += uLightColor * spec * uSpecular * fres;
+          col += uLightColor * fres * 0.3;
+
+          /* cursor highlight on surface */
+          if (uCursorRadius > 0.01) {
+            float ch = length(p - uCursorSphere);
+            if (ch < uCursorRadius + 0.4) {
+              float hl = 1.0 - smoothstep(0.0, uCursorRadius + 0.4, ch);
+              col += uGlowColor * hl * 0.25;
+            }
+          }
+
+          col *= occl;
+          col = pow(col, vec3(uContrast * 0.9));
+          col = col / (col + 0.8);
+
+          float fog = 1.0 - exp(-t * uFog);
+          col = mix(col, uBgColor, fog * 0.3);
+          col += uGlowColor * glow * 0.2;
+
+          gl_FragColor = vec4(col, 1.0);
+        } else {
+          if (glow > 0.01) {
+            gl_FragColor = vec4(uGlowColor * glow, glow * 0.7);
+          } else {
+            gl_FragColor = vec4(0.0);
+          }
+        }
+      }
+    `,
+    transparent: true
+  });
+
+  scene.add(new THREE.Mesh(new THREE.PlaneGeometry(2, 2), material));
+
+  /* mouse tracking — desktop only */
+  if (enableMouse) {
+    window.addEventListener('mousemove', function(e) {
+      targetMouse.x = e.clientX / window.innerWidth;
+      targetMouse.y = 1 - e.clientY / window.innerHeight;
+    }, { passive: true });
+  }
+
+  /* observe hero visibility — pause render when out of viewport */
+  var heroObserver = new IntersectionObserver(function(entries) {
+    heroInView = entries[0].isIntersecting;
+  }, { threshold: 0.05 });
+  heroObserver.observe(heroSection);
+
+  /* resize — debounced */
+  var resizeTimer;
+  window.addEventListener('resize', function() {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(function() {
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      material.uniforms.uResolution.value.set(window.innerWidth, window.innerHeight);
+      material.uniforms.uActualResolution.value.set(
+        window.innerWidth * effectiveRatio,
+        window.innerHeight * effectiveRatio
+      );
+    }, 150);
+  }, { passive: true });
+
+  /* first render + signal ready */
+  renderer.render(scene, camera);
+  if (window.__shaderReady) window.__shaderReady();
+
+  animate(0);
+}
+
+/* throttled render loop */
+var frameInterval = isMobile ? 1000 / 30 : 1000 / 45;
+var lastFrame = 0;
+
+function animate(now) {
+  raf = requestAnimationFrame(animate);
+
+  /* skip rendering when hero isn't visible — huge perf win */
+  if (!heroInView) return;
+
+  if (now - lastFrame < frameInterval) return;
+  lastFrame = now;
+
+  /* lerp mouse position — desktop only */
+  if (enableMouse) {
+    mouse.x += (targetMouse.x - mouse.x) * 0.08;
+    mouse.y += (targetMouse.y - mouse.y) * 0.08;
+    var wp = screenToWorld(mouse.x, mouse.y);
+    cursorSphere.copy(wp);
+    material.uniforms.uCursorSphere.value.copy(cursorSphere);
+
+    /* dynamic cursor radius based on proximity to anchors */
+    var anchors = [screenToWorld(0.08, 0.92), screenToWorld(0.92, 0.08)];
+    var closest = 999;
+    anchors.forEach(function(a) { closest = Math.min(closest, cursorSphere.distanceTo(a)); });
+    var prox = Math.max(0, 1 - closest / 1.5);
+    material.uniforms.uCursorRadius.value = 0.08 + prox * 0.1;
+  }
+
+  material.uniforms.uTime.value = clock.getElapsedTime();
+  renderer.render(scene, camera);
+}
+
+init();
+
+} /* end if !isReducedMotion */
+</script>
+
+<!-- ─── CURSOR ────────────────────────────────────────────────── -->
+<script>
+(function() {
+  if (window.matchMedia('(max-width: 900px)').matches) return;
+
+  var cur  = document.getElementById('cursor');
+  var ring = document.getElementById('cursor-ring');
+  var cx = -100, cy = -100;
+  var rx = -100, ry = -100;
+
+  document.addEventListener('mousemove', function(e) {
+    cx = e.clientX; cy = e.clientY;
+    cur.style.left = cx + 'px';
+    cur.style.top  = cy + 'px';
+  }, { passive: true });
+
+  (function followRing() {
+    rx += (cx - rx) * 0.15;
+    ry += (cy - ry) * 0.15;
+    ring.style.left = rx + 'px';
+    ring.style.top  = ry + 'px';
+    requestAnimationFrame(followRing);
+  })();
+})();
+</script>
+
+<!-- ─── LENIS + SCROLL REVEALS ─────────────────────────────────── -->
+<script>
+(function() {
+  /* default Lenis — no custom easing override, just smooth scroll */
+  var lenis = new Lenis({
+    duration: 1.2,
+    smoothWheel: true,
+    touchMultiplier: 1.5
+  });
+
+  /* sync with GSAP ticker */
+  lenis.on('scroll', ScrollTrigger.update);
+  gsap.ticker.add(function(time) { lenis.raf(time * 1000); });
+  gsap.ticker.lagSmoothing(0);
+
+  /* scroll reveals via IntersectionObserver — lightweight */
+  var revealEls = document.querySelectorAll('.reveal');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  revealEls.forEach(function(el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
