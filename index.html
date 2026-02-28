@@ -157,6 +157,24 @@
       overflow: hidden;
     }
 
+    /* ─── CUSTOM SCROLLBAR ───────────────────────────────────────── */
+    ::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--bg);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: var(--gold);
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: var(--gold-light);
+    }
+
     /* ─── CUSTOM SELECTION — gold instead of default blue ────────── */
     ::selection {
       background: rgba(200, 145, 58, 0.35);
@@ -356,8 +374,13 @@
       background: var(--bg-2);
       cursor: pointer;
       position: relative;
-      transition: background 0.3s var(--ease-float),
-        transform 0.3s var(--ease-signature);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-primary);
+      overflow: hidden;
+      transition: background 0.4s var(--ease-float),
+        transform 0.4s var(--ease-signature);
     }
 
     .nav-theme-toggle:hover {
@@ -365,19 +388,32 @@
       background: var(--gold-dim);
     }
 
-    .theme-icon {
+    .theme-sun,
+    .theme-moon {
       position: absolute;
-      inset: 0;
-      margin: auto;
-      width: 16px;
-      height: 16px;
-      border-radius: 50%;
-      background: var(--gold);
-      transition: transform 0.4s ease;
+      width: 18px;
+      height: 18px;
+      transition: transform 0.5s var(--ease-signature), opacity 0.5s var(--ease-signature);
     }
 
-    html.dark .theme-icon {
-      transform: scale(0.6);
+    html:not(.dark) .theme-sun {
+      opacity: 1;
+      transform: rotate(0) scale(1);
+    }
+
+    html:not(.dark) .theme-moon {
+      opacity: 0;
+      transform: rotate(-90deg) scale(0.5);
+    }
+
+    html.dark .theme-sun {
+      opacity: 0;
+      transform: rotate(90deg) scale(0.5);
+    }
+
+    html.dark .theme-moon {
+      opacity: 1;
+      transform: rotate(0) scale(1);
     }
 
     .nav-cta {
@@ -1380,7 +1416,25 @@
       <a href="#community" class="nav-link">Community</a>
       <a href="#contact" class="nav-link">Contact</a>
       <button id="theme-toggle" class="nav-theme-toggle" aria-label="Toggle dark mode">
-        <span class="theme-icon"></span>
+        <svg class="theme-sun" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em"
+          fill="currentColor" stroke-linecap="round" viewBox="0 0 32 32">
+          <circle cx="16" cy="16" r="9.34" />
+          <g stroke="currentColor" stroke-width="1.5">
+            <path d="M16 5.5v-4" />
+            <path d="M16 30.5v-4" />
+            <path d="M1.5 16h4" />
+            <path d="M26.5 16h4" />
+            <path d="m23.4 8.6 2.8-2.8" />
+            <path d="m5.7 26.3 2.9-2.9" />
+            <path d="m5.8 5.8 2.8 2.8" />
+            <path d="m23.4 23.4 2.9 2.9" />
+          </g>
+        </svg>
+        <svg class="theme-moon" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" width="1em" height="1em"
+          fill="currentColor" viewBox="0 0 32 32">
+          <path
+            d="M16 .5C7.4.5.5 7.4.5 16S7.4 31.5 16 31.5 31.5 24.6 31.5 16 24.6.5 16 .5zm0 28.1V3.4C23 3.4 28.6 9 28.6 16S23 28.6 16 28.6z" />
+        </svg>
       </button>
       <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="nav-cta">Join
         Us</a>
@@ -1814,15 +1868,15 @@
       const SHADER_THEMES = {
         light: {
           bg: '#F6F1E8',
-          sphere: '#E6DED2',
+          sphere: '#DCD0C0',
           gold: '#C8923A',
           glow: '#D9A95A',
-          ambient: 0.35,
-          diffuse: 0.4,
-          specular: 0.6,
-          fresnel: 0.8,
-          contrast: 0.95,
-          fog: 0.22
+          ambient: 0.2,
+          diffuse: 0.8,
+          specular: 1.2,
+          fresnel: 1.0,
+          contrast: 1.2,
+          fog: 0.1
         },
         dark: {
           bg: '#0c0b09',
