@@ -1864,12 +1864,12 @@
     const isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent);
     const isReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    /* bail entirely if reduced motion */
-    if (isReducedMotion) {
+    /* bail entirely if reduced motion or mobile */
+    if (isReducedMotion || isMobile) {
       if (window.__shaderReady) window.__shaderReady();
     } else {
 
-      const renderScale = isMobile ? 0.6 : 0.8;
+      const renderScale = 0.65; // slightly reduced from 0.8 for desktop optimization
       const pixelRatio = Math.min(window.devicePixelRatio || 1, window.devicePixelRatio || 2);
       const effectiveRatio = pixelRatio * renderScale;
 
