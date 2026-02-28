@@ -567,6 +567,7 @@
       position: fixed;
       bottom: var(--pad);
       right: var(--pad);
+      transform: translateY(-150%) !important;
       text-align: right;
       z-index: 40;
       font-family: var(--font-mono);
@@ -1005,6 +1006,7 @@
       display: flex;
       flex-direction: column;
       gap: 1.25rem;
+      margin-left: 2rem;
     }
 
     .contact-item {
@@ -1370,15 +1372,18 @@
 
   <!-- H mask overlay — used for the zoom-reveal after morph -->
   <div class="loader-mask-overlay" id="loader-mask-overlay">
-    <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid slice">
+    <svg width="100vw" height="100vh" preserveAspectRatio="xMidYMid slice">
       <defs>
-        <clipPath id="h-reveal-clip" clipPathUnits="objectBoundingBox">
-          <path id="h-clip-path"
-            d="M0.1,0.9 L0.1,0.1 L0.275,0.1 L0.275,0.425 L0.725,0.425 L0.725,0.1 L0.9,0.1 L0.9,0.9 L0.725,0.9 L0.725,0.575 L0.275,0.575 L0.275,0.9 Z M0.05,0.1 L0.325,0.1 L0.325,0 L0.05,0 Z M0.675,0.1 L0.95,0.1 L0.95,0 L0.675,0 Z M0.05,0.9 L0.325,0.9 L0.325,1 L0.05,1 Z M0.675,0.9 L0.95,0.9 L0.95,1 L0.675,1 Z" />
-        </clipPath>
+        <mask id="h-mask">
+          <rect width="100%" height="100%" fill="white" />
+          <g id="h-zoom-group">
+            <path id="h-zoom-path"
+              d="M20 180V20h35v65h90V20h35v160h-35v-65H55v65ZM10 20h55V0H10Zm125 0h55V0h-55ZM10 180h55v20H10Zm125 0h55v20h-55Z"
+              fill="black" transform="translate(-100, -100)" />
+          </g>
+        </mask>
       </defs>
-      <!-- dark overlay with H-shaped hole -->
-      <rect width="200" height="200" fill="var(--bg)" />
+      <rect width="100%" height="100%" fill="var(--bg)" mask="url(#h-mask)" />
     </svg>
   </div>
 
@@ -1507,7 +1512,7 @@
         <div class="stat-label">Always open · no appointment needed</div>
       </div>
       <div class="about-stat reveal reveal-delay-4">
-        <div class="stat-number">OLO</div>
+        <div class="stat-number">CITY</div>
         <div class="stat-label">Olongapo City · Philippines</div>
       </div>
     </div>
@@ -1868,15 +1873,15 @@
       const SHADER_THEMES = {
         light: {
           bg: '#F6F1E8',
-          sphere: '#DCD0C0',
-          gold: '#C8923A',
-          glow: '#D9A95A',
-          ambient: 0.2,
-          diffuse: 0.8,
-          specular: 1.2,
-          fresnel: 1.0,
-          contrast: 1.2,
-          fog: 0.1
+          sphere: '#8A7A65',
+          gold: '#B8751F',
+          glow: '#C8923A',
+          ambient: 0.05,
+          diffuse: 0.9,
+          specular: 1.8,
+          fresnel: 1.8,
+          contrast: 1.7,
+          fog: 0.05,
         },
         dark: {
           bg: '#0c0b09',
