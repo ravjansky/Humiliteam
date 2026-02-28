@@ -1357,34 +1357,15 @@
         <rect x="90" y="6" width="20" height="188" rx="4" fill="none" stroke="var(--gold)" stroke-width="1.5" />
         <rect x="40" y="70" width="120" height="20" rx="3" fill="none" stroke="var(--gold)" stroke-width="1.5" />
       </g>
-      <!-- cross path (will morph into H path) — filled, clipped by the rising rect -->
+      <!-- cross path — filled, clipped by the rising rect -->
       <path id="loader-cross-path"
-        d="M90 6 L110 6 Q114 6 114 10 L114 190 Q114 194 110 194 L90 194 Q86 194 86 190 L86 10 Q86 6 90 6 Z M40 70 L160 70 Q163 70 163 73 L163 87 Q163 90 160 90 L40 90 Q37 90 37 87 L37 73 Q37 70 40 70 Z"
+        d="M 90 6 H 110 Q 114 6 114 10 V 70 H 160 Q 163 70 163 73 V 87 Q 163 90 160 90 H 114 V 190 Q 114 194 110 194 H 90 Q 86 194 86 190 V 90 H 40 Q 37 90 37 87 V 73 Q 37 70 40 70 H 86 V 10 Q 86 6 90 6 Z"
         fill="url(#loader-grad)" clip-path="url(#loader-fill-clip)" />
-      <!-- H path — invisible, used as morph target -->
-      <path id="loader-h-path"
-        d="M20 180V20h35v65h90V20h35v160h-35v-65H55v65ZM10 20h55V0H10Zm125 0h55V0h-55ZM10 180h55v20H10Zm125 0h55v20h-55Z"
-        fill="transparent" />
     </svg>
     <span class="loader-percent" id="loader-percent">0%</span>
-    <span class="loader-tagline" id="loader-tagline">where faith meets friendship</span>
-  </div>
-
-  <!-- H mask overlay — used for the zoom-reveal after morph -->
-  <div class="loader-mask-overlay" id="loader-mask-overlay">
-    <svg width="100vw" height="100vh" preserveAspectRatio="xMidYMid slice">
-      <defs>
-        <mask id="h-mask">
-          <rect width="100%" height="100%" fill="white" />
-          <g id="h-zoom-group">
-            <path id="h-zoom-path"
-              d="M20 180V20h35v65h90V20h35v160h-35v-65H55v65ZM10 20h55V0H10Zm125 0h55V0h-55ZM10 180h55v20H10Zm125 0h55v20h-55Z"
-              fill="black" transform="translate(-100, -100)" />
-          </g>
-        </mask>
-      </defs>
-      <rect width="100%" height="100%" fill="var(--bg)" mask="url(#h-mask)" />
-    </svg>
+    <span class="loader-tagline" id="loader-tagline">where faith meets friendship<br><span
+        style="font-size: 0.75rem; display: block; margin-top: 0.5rem; text-align: center;">"For where two or three
+        gather in my name, there am I with them."<br>— Matthew 18:20</span></span>
   </div>
 
   <!-- ─── CURSOR ────────────────────────────────────────────────── -->
@@ -1454,6 +1435,9 @@
       <p class="hero-eyebrow">Olongapo City, Philippines · Est. Youth Network</p>
       <h1 class="hero-title">Love God.<br><em>Love People.</em><br>Make Disciples.</h1>
       <p class="hero-sub">936 souls strong &nbsp;·&nbsp; always open &nbsp;·&nbsp; everyone is welcome</p>
+      <p class="hero-sub"
+        style="margin-top: 1.5rem; text-transform: none; letter-spacing: normal; font-style: italic; color: var(--gold);">
+        "Therefore go and make disciples of all nations..." — Matthew 28:19</p>
     </div>
 
     <div class="hero-left" id="hero-left">
@@ -1497,6 +1481,10 @@
             stroke-linejoin="round" />
         </svg>
       </a>
+      <p class="about-body reveal reveal-delay-4"
+        style="margin-top: 2.5rem; font-style: italic; font-size: 0.9rem; border-left: 2px solid var(--gold); padding-left: 1rem;">
+        "And let us consider how we may spur one another on toward love and good deeds, not giving up meeting
+        together..."<br>— Hebrews 10:24-25</p>
     </div>
     <div class="about-right">
       <div class="about-stat reveal reveal-delay-2">
@@ -1533,6 +1521,8 @@
           <h3 class="pillar-name">Love <em>God</em></h3>
           <p class="pillar-desc">Faith isn't a performance — it's a relationship. We dive into scripture, ask hard
             questions, and pursue a God who's bigger than any answer we have.</p>
+          <p class="pillar-desc" style="margin-top: 1rem; font-style: italic; color: var(--gold);">"Love the Lord your
+            God with all your heart and with all your soul and with all your mind." — Matthew 22:37</p>
         </article>
         <article class="pillar reveal reveal-delay-1">
           <span class="pillar-number" aria-hidden="true">02</span>
@@ -1540,6 +1530,8 @@
           <h3 class="pillar-name">Love <em>People</em></h3>
           <p class="pillar-desc">Belonging before believing. Everyone is welcome at any stage of their journey. We don't
             gatekeep grace — we just show up for each other.</p>
+          <p class="pillar-desc" style="margin-top: 1rem; font-style: italic; color: var(--gold);">"Love your neighbor
+            as yourself." — Matthew 22:39</p>
         </article>
         <article class="pillar reveal reveal-delay-2">
           <span class="pillar-number" aria-hidden="true">03</span>
@@ -1547,6 +1539,8 @@
           <h3 class="pillar-name">Make <em>Disciples</em></h3>
           <p class="pillar-desc">The goal was never to grow a group. The goal is to grow people who go and do the same
             thing — love well, lead humbly, multiply.</p>
+          <p class="pillar-desc" style="margin-top: 1rem; font-style: italic; color: var(--gold);">"Therefore go and
+            make disciples of all nations..." — Matthew 28:19</p>
         </article>
       </div>
     </div>
@@ -1560,6 +1554,9 @@
       <p class="community-body reveal reveal-delay-2">You don't need to have it together to show up. HumiliTeam is for
         people who are figuring it out — people who want Godly friends, not just acquaintances. People who want depth,
         honesty, and a place they can actually belong.</p>
+      <p class="community-body reveal reveal-delay-3"
+        style="font-style: italic; color: var(--gold); margin-top: -1.5rem;">"How good and pleasant it is when God's
+        people live together in unity!" — Psalm 133:1</p>
       <div class="community-cards">
         <div class="comm-card reveal">
           <p class="comm-card-tag">For the Seeker</p>
@@ -1603,7 +1600,10 @@
         <h2 class="contact-title reveal reveal-delay-1" id="contact-heading">We're always<br><em>open.</em></h2>
         <p class="contact-body reveal reveal-delay-2">No appointment needed. No perfect timing. If you feel the pull to
           reach out, that's enough. We're here.</p>
-        <address class="contact-details reveal reveal-delay-2" style="font-style:normal">
+        <p class="contact-body reveal reveal-delay-3"
+          style="font-style: italic; color: var(--gold); border-left: 2px solid var(--gold); padding-left: 1rem;">"Come
+          to me, all you who are weary and burdened, and I will give you rest."<br>— Matthew 11:28</p>
+        <address class="contact-details reveal reveal-delay-4" style="font-style:normal">
           <div class="contact-item"><span class="contact-item-label">Phone</span><a href="tel:09271497058"
               class="contact-item-value">0927 149 7058</a></div>
           <div class="contact-item"><span class="contact-item-label">Email</span><a
@@ -1656,10 +1656,9 @@
   <!-- ═══════════════════════════════════════════════════════════════
      SCRIPTS
      ═══════════════════════════════════════════════════════════════ -->
-  <!-- GSAP core + MorphSVG for the real path morph -->
+  <!-- GSAP core -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <!-- MorphSVG is a Club plugin — we use a manual path interpolation fallback below -->
 
   <!-- Lenis -->
   <script src="https://unpkg.com/lenis@1.1.18/dist/lenis.min.js"></script>
@@ -1678,8 +1677,6 @@
       const percentEl = document.getElementById('loader-percent');
       const taglineEl = document.getElementById('loader-tagline');
       const crossPath = document.getElementById('loader-cross-path');
-      const hPath = document.getElementById('loader-h-path');
-      const maskOverlay = document.getElementById('loader-mask-overlay');
 
       let progress = 0;
       let loaded = false;
@@ -1724,7 +1721,7 @@
           duration: 0.5,
           ease: EASE.signature,
           onUpdate: function () { updateProgress(this.targets()[0].val); },
-          onComplete: runMorphSequence
+          onComplete: finalizeLoader
         });
       });
 
@@ -1735,82 +1732,61 @@
           shaderReady = true;
           fillTween.kill();
           updateProgress(100);
-          runMorphSequence();
+          finalizeLoader();
         }
       }, 7000);
 
-      /* ── the morph: cross path → H path ── */
-      function runMorphSequence() {
-        var hPathData = hPath.getAttribute('d');
-
+      /* ── the loader finish: graceful zoom out & fade ── */
+      function finalizeLoader() {
         var tl = gsap.timeline();
 
-        /* fade out text elements */
-        tl.to([percentEl, taglineEl], { opacity: 0, duration: 0.3, ease: EASE.smooth })
+        /* make sure SVG doesn't crop the zoom */
+        gsap.set('#loader-morph-stage', { overflow: 'visible' });
 
-          /* morph the cross path into H path — using GSAP attr tween with path data
-             Since MorphSVG is a club plugin, we do a crossfade-scale morph:
-             shrink cross, swap path data at midpoint, grow H */
-          .to('#loader-morph-stage', {
-            scale: 0.7,
-            opacity: 0.4,
-            duration: 0.4,
-            ease: EASE.signature,
-            onComplete: function () {
-              /* swap cross for H path data */
-              crossPath.setAttribute('d', hPathData);
-              crossPath.setAttribute('clip-path', '');
-              document.getElementById('cross-outline').style.display = 'none';
-            }
-          })
-          .to('#loader-morph-stage', {
-            scale: 1.1,
-            opacity: 1,
-            duration: 0.5,
-            ease: EASE.signature
-          })
+        /* Ensure cross anchors perfectly on its center for the zoom */
+        gsap.set(crossPath, { transformOrigin: 'center center' });
 
-          /* hold briefly so the H reads */
-          .to({}, { duration: 0.5 })
+        /* fade out text elements quickly first */
+        tl.to([percentEl, taglineEl], {
+          opacity: 0,
+          duration: 0.3,
+          ease: EASE.smooth
+        })
 
-          /* now: zoom the H outward as a clip-path mask revealing the page */
-          .call(function () {
-            /* hide the loader bg, activate the mask overlay */
-            loaderEl.style.background = 'transparent';
-            loaderEl.style.pointerEvents = 'none';
-
-            /* hide loader SVG */
-            document.getElementById('loader-morph-stage').style.display = 'none';
-
-            /* show mask overlay — a dark rect with an H-shaped clip punched through */
-            maskOverlay.style.display = 'block';
-          })
-
-          /* scale the clip-path from small (H letterform) outward past viewport edges */
-          .fromTo('#h-clip-path', {
-            attr: {
-              transform: 'translate(0.35, 0.3) scale(0.3)'
-            }
-          }, {
-            attr: {
-              transform: 'translate(-0.5, -0.5) scale(2.2)'
-            },
-            duration: 1.2,
-            ease: EASE.signature
-          })
-
-          /* fade out the mask overlay entirely */
-          .to(maskOverlay, {
+          /* pop the cross outline away and slightly scale the filled cross down 
+             to give a subtle "taking a breath" feeling before fading into the page */
+          .to('#cross-outline', {
             opacity: 0,
-            duration: 0.4,
+            scale: 0.8,
+            transformOrigin: 'center center',
+            duration: 0.5,
+            ease: "power2.inOut"
+          }, 0.2)
+
+          .to(crossPath, {
+            scale: 0.85,  // the premium subtle zoom out
+            duration: 0.8,
+            ease: "power2.inOut"
+          }, 0.2)
+
+          // Now fade out the cross SVG and the entire loader overlay together
+          .to('#loader-morph-stage', {
+            opacity: 0,
+            scale: 0.7, // continues to zoom out slightly as it vanishes
+            duration: 0.6,
+            ease: "power2.in"
+          }, "-=0.2")
+
+          .to(loaderEl, {
+            opacity: 0,
+            duration: 0.8,
             ease: EASE.smooth,
             onComplete: function () {
-              maskOverlay.style.display = 'none';
               loaderEl.style.display = 'none';
               document.body.classList.remove('is-loading');
               revealPage();
             }
-          }, '-=0.2');
+          }, "-=0.4");
       }
 
       function revealPage() {
