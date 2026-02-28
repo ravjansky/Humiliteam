@@ -434,6 +434,36 @@
       transform: translateY(-1px);
     }
 
+    .nav-hamburger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 6px;
+      width: 44px;
+      height: 44px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      z-index: 51;
+      padding: 0;
+    }
+
+    .hamburger-line {
+      width: 24px;
+      height: 2px;
+      background: var(--text-primary);
+      transition: transform 0.3s var(--ease-signature), opacity 0.3s var(--ease-signature);
+      margin: 0 auto;
+    }
+
+    .nav.menu-open .hamburger-line:nth-child(1) {
+      transform: translateY(4px) rotate(45deg);
+    }
+
+    .nav.menu-open .hamburger-line:nth-child(2) {
+      transform: translateY(-4px) rotate(-45deg);
+    }
+
     /* ─── HERO CONTENT ───────────────────────────────────────────── */
     .hero-content {
       position: absolute;
@@ -1255,25 +1285,41 @@
     }
 
     @media (max-width: 600px) {
-      .nav-right {
-        display: none;
-      }
-
       .nav {
         padding: 1rem;
       }
 
+      .nav-hamburger {
+        display: flex;
+      }
+
       .nav-right {
-        gap: 0.8rem;
+        position: fixed;
+        inset: 0;
+        background: var(--bg);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 2.5rem;
+        z-index: 50;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.4s var(--ease-signature);
+      }
+
+      .nav.menu-open .nav-right {
+        opacity: 1;
+        pointer-events: auto;
       }
 
       .nav-link {
-        display: none;
+        font-size: 1.25rem;
+        transition: transform 0.3s var(--ease-float), opacity 0.3s var(--ease-float);
       }
 
       .nav-cta {
-        font-size: 0.65rem;
-        padding: 0.45rem 0.8rem;
+        font-size: 0.85rem;
+        padding: 0.8rem 1.6rem;
       }
 
       .nav-theme-toggle {
@@ -1425,6 +1471,10 @@
       <a href="https://www.facebook.com/Humiliteam" target="_blank" rel="noopener noreferrer" class="nav-cta">Join
         Us</a>
     </div>
+    <button class="nav-hamburger" id="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
   </nav>
 
   <!-- ─── HERO ──────────────────────────────────────────────────── -->
@@ -1819,8 +1869,8 @@
       if (window.__shaderReady) window.__shaderReady();
     } else {
 
-      const renderScale = isMobile ? 0.35 : 0.5;
-      const pixelRatio = Math.min(window.devicePixelRatio || 1, isMobile ? 1 : 1.5);
+      const renderScale = isMobile ? 0.6 : 0.8;
+      const pixelRatio = Math.min(window.devicePixelRatio || 1, window.devicePixelRatio || 2);
       const effectiveRatio = pixelRatio * renderScale;
 
       let scene, camera, renderer, material, clock;
@@ -1922,8 +1972,8 @@
         const GOLD = new THREE.Color(theme.gold);
         const BG = new THREE.Color(theme.bg);
 
-        const sphereCount = isMobile ? 2 : 4;
-        const marchSteps = isMobile ? 12 : 28;
+        const sphereCount = isMobile ? 3 : 4;
+        const marchSteps = isMobile ? 24 : 32;
 
         material = new THREE.ShaderMaterial({
           uniforms: {
@@ -2292,6 +2342,31 @@
           if (window.__applyShaderTheme) {
             window.__applyShaderTheme();
           }
+        });
+      }
+
+      /* Mobile Nav Toggle */
+      const hamburger = document.getElementById('nav-hamburger');
+      const nav = document.getElementById('main-nav');
+      const navLinks = document.querySelectorAll('.nav-link');
+
+      if (hamburger && nav) {
+        hamburger.addEventListener('click', function () {
+          const isOpen = nav.classList.toggle('menu-open');
+          hamburger.setAttribute('aria-expanded', isOpen);
+          if (isOpen) {
+            document.body.style.overflow = 'hidden';
+          } else {
+            document.body.style.overflow = '';
+          }
+        });
+
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            nav.classList.remove('menu-open');
+            hamburger.setAttribute('aria-expanded', 'false');
+            document.body.style.overflow = '';
+          });
         });
       }
     })();
